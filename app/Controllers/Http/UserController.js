@@ -2,6 +2,9 @@
 
 const User = use("App/Models/User")
 
+/** @type {import('@adonisjs/framework/src/Hash')} */
+const Hash = use('Hash')
+
 class UserController {
   async create ({ request }) {
     const data = request.only(["cellphone", "password","name", "age", "address", "gender", "profession"])
@@ -17,6 +20,7 @@ class UserController {
     const user = await User
     .query()
     .where('cellphone', cellphone)
+    .fetch()
 
     return user
   }
@@ -27,7 +31,7 @@ class UserController {
     const user = await User
     .query()
     .where('cellphone', cellphone)
-    .update({ password: password })
+    .update({ password: await Hash.make(password) })
 
     return user
   }

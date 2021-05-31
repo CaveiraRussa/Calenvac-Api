@@ -7,7 +7,8 @@
   "scripts": {
     "start": "node server.js",
     "test": "node ace test",
-    "rocknroll":"ngrok http 3333"
+    "rocknroll":"ngrok http 3333",
+    "local":"adonis serve --dev"
   },
   "keywords": [
     "adonisjs",
