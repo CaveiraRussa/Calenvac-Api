@@ -4,7 +4,19 @@ To start the api use
 ```bash
 npm install
 ```
+And
+
+```bash
+npm i -g ngrok adonis
+```
+```bash
+npm install sqlite3
+```
 Then
+
+```bash
+adonis migration:run
+```
 
 To start server
 ```bash
