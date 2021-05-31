@@ -20,7 +20,7 @@ adonis migration:run
 
 To start server
 ```bash
-npm start
+adonis serve --dev
 ```
 
 To start NGROK
